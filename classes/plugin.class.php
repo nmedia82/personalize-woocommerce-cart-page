@@ -258,12 +258,24 @@ class NM_PLUGIN_WooStore extends NM_Framwork_V1_woostore{
 	 * saving admin setting in wp option data table
 	 */
 	function save_settings(){
-	
-		// print_r($_REQUEST);
+
+		$nonce = $_REQUEST['_wpnonce_id'];
+
+		if ( !wp_verify_nonce( $nonce, 'nm_woostore_nonce' ) ){
+
+			$response = array( 'status'   => 'error',
+                        'message'  => __('Sorry for security reason.', $this->plugin_meta['shortname']),
+                    );	
+		}else{
+
+			update_option($this->plugin_meta['shortname'].'_settings', $_REQUEST);
+			
+			$response = array( 'status'   => 'success',
+	                           'message'  => __('All options are updated.', $this->plugin_meta['shortname']),
+	                    );
+		} 
 		
-		update_option($this->plugin_meta['shortname'].'_settings', $_REQUEST);
-		_e('All options are updated', $this->plugin_meta['shortname']);
-		die(0);
+	    wp_send_json( $response );
 	}
 
 

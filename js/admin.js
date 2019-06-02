@@ -69,8 +69,11 @@ function update_options(options) {
 
 		jQuery.post(ajaxurl, data, function(resp) {
 
-			jQuery("#filemanager-settigns-saving").html(resp);
-			window.location.reload(true);
+			jQuery(".filemanager-settigns-saving").html(resp.message);
+			
+			if (resp.status == 'success') {
+				window.location.reload(true);
+			}
 
 		});
 	}

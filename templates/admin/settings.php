@@ -11,10 +11,14 @@ $this -> load_template('admin/options.php');
 
 $sendUpdate = array();
 
+$sendUpdate['_wpnonce_id'] = array('type'	=> 'text');
 ?>
 
 
 <div class="wrap rm_wrap">
+
+	<input type="hidden" id="_wpnonce_id" name="_wpnonce_id" value="<?php echo wp_create_nonce( 'nm_woostore_nonce' ) ?>" >
+
 <h2>
 	WooCommerce Store Customizer Settings
 </h2>
@@ -195,7 +199,7 @@ $sendUpdate = array();
 		</ul>
 
 		<p><button class="button button-primary" onclick=update_options('<?php echo json_encode($sendUpdate)?>')><?php _e('Save settings', 'nm-filemanager')?></button>
-			<span id="filemanager-settigns-saving"></span>
+			<span class="filemanager-settigns-saving"></span>
 		</p>
 	
 	</div>
