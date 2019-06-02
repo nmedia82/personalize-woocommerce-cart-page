@@ -51,7 +51,7 @@ function update_options(options) {
 
 	var opt = jQuery.parseJSON(options);
 
-	jQuery("#filemanager-settigns-saving").html('<img src="'+nm_woostore_vars.doing+'" />');
+	jQuery(".filemanager-settigns-saving").html('<img src="'+nm_woostore_vars.doing+'" />');
 	/*
 	 * extractElementData defined in nm-globals.js
 	 */
