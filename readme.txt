@@ -4,7 +4,7 @@ Donate link: http://www.najeebmedia.com/donate/
 Tags: woocommerce, personailzed woocommerce, add message to cart page, woocommerce cart page, change woocommerce cart
 Requires at least: 3.9
 Tested up to: 5.2
-Stable tag: 2.4
+Stable tag: 2.5
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -94,6 +94,8 @@ You should have latest version.
 4. Plugin Settings
 
 == Changelog ==
+= 2.5 June 3, 2019 =
+* Bug fixed: Some security related issue fixed
 = 2.4 October 23, 2018 =
 * Bug fixed: Settings saving issue in php version 7+ fixed.
 = 2.3 July 28, 2018 =

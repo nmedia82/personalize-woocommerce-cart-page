@@ -3,7 +3,7 @@
 Plugin Name: Personalized WooCommerce Store
 Plugin URI: http://www.najeebmedia.com
 Description: Woocommerce extension which allow store admin to add message in almost every area of store like Product, Cart, Checkout, My Account etc. Even some action like redirect login and registrion.
-Version: 2.4
+Version: 2.5
 Author: Najeeb Ahmad
 Author URI: http://www.najeebmedia.com/
 Text Domain: nm-woostore
