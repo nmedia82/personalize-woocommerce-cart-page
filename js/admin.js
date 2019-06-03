@@ -51,7 +51,7 @@ function update_options(options) {
 
 	var opt = jQuery.parseJSON(options);
 
-	jQuery("#filemanager-settigns-saving").html('<img src="'+nm_woostore_vars.doing+'" />');
+	jQuery(".filemanager-settigns-saving").html('<img src="'+nm_woostore_vars.doing+'" />');
 	/*
 	 * extractElementData defined in nm-globals.js
 	 */
@@ -69,8 +69,11 @@ function update_options(options) {
 
 		jQuery.post(ajaxurl, data, function(resp) {
 
-			jQuery("#filemanager-settigns-saving").html(resp);
-			window.location.reload(true);
+			jQuery(".filemanager-settigns-saving").html(resp.message);
+			
+			if (resp.status == 'success') {
+				window.location.reload(true);
+			}
 
 		});
 	}
