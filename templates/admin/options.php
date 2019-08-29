@@ -98,7 +98,7 @@ $meat_cart = array(
 					 							),
 
 					'widget-shopping-cart-before-buttons'	=> array(	'label'		=> __('Widget cart before buttons', 'nm-woostore'),
-					 							'desc'		=> __('It will show your text before button of widget shoping cart', 'nm-woostore'),
+					 							'desc'		=> __('It will show your text before button of widget shopping cart', 'nm-woostore'),
 					 							'id'			=> 'nm_woostore_'.'widgetshoppingcartbeforebuttons',
 					 							'type'			=> 'textarea',
 					 							'default'		=> '',
